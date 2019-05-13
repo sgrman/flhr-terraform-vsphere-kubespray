@@ -3,19 +3,19 @@
 #===============================================================================
 
 # vCenter IP or FQDN #
-vsphere_vcenter = ""
+vsphere_vcenter = "vc01.flhrnet.local"
 
 # vSphere username used to deploy the infrastructure #
-vsphere_user = ""
+vsphere_user = "administrator@vsphere.local"
 
 # Skip the verification of the vCenter SSL certificate (true/false) #
 vsphere_unverified_ssl = "true"
 
 # vSphere datacenter name where the infrastructure will be deployed #
-vsphere_datacenter = ""
+vsphere_datacenter = "FLHRNET"
 
 # vSphere cluster name where the infrastructure will be deployed #
-vsphere_drs_cluster = ""
+vsphere_drs_cluster = "COMPUTE"
 
 # vSphere resource pool name that will be created to deploy the virtual machines #
 vsphere_resource_pool = "kubernetes-kubespray"
@@ -24,20 +24,20 @@ vsphere_resource_pool = "kubernetes-kubespray"
 vsphere_enable_anti_affinity = "false"
 
 # vSphere username used by the vSphere cloud provider #
-vsphere_vcp_user = ""
+vsphere_vcp_user = "administrator@vsphere.local"
 
 # vSphere datastore name where the Kubernetes persistant volumes will be created #
-vsphere_vcp_datastore = ""
+vsphere_vcp_datastore = "vsandatastore"
 
 #===============================================================================
 # Global virtual machines parameters
 #===============================================================================
 
 # Username used to SSH to the virtual machines #
-vm_user = ""
+vm_user = "ubuntu"
 
 # The linux distribution used by the virtual machines (ubuntu/debian/centos/rhel) #
-vm_distro = ""
+vm_distro = "ubuntu"
 
 # The prefix to add to the names of the virtual machines #
 vm_name_prefix = "k8s-kubespray"
@@ -46,22 +46,22 @@ vm_name_prefix = "k8s-kubespray"
 vm_folder = "kubernetes-kubespray"
 
 # The datastore name used to store the files of the virtual machines #
-vm_datastore = ""
+vm_datastore = "vsandatastore"
 
 # The vSphere network name used by the virtual machines #
-vm_network = ""
+vm_network = "kubespray-ls"
 
 # The netmask used to configure the network cards of the virtual machines (example: 24)#
-vm_netmask = ""
+vm_netmask = "24"
 
 # The network gateway used by the virtual machines #
 vm_gateway = ""
 
 # The DNS server used by the virtual machines #
-vm_dns = ""
+vm_dns = "10.0.1.250"
 
 # The domain name used by the virtual machines #
-vm_domain = ""
+vm_domain = "flhrnet.local"
 
 # The vSphere template the virtual machine are based on #
 vm_template = ""
@@ -127,8 +127,8 @@ vm_haproxy_ips = {
 #===============================================================================
 
 # If you use RHEL 7 as a base distro, you need to specify your subscription account #
-rh_username = ""
-rh_password = ""
+#rh_username = ""
+#rh_password = ""
 
 #===============================================================================
 # Kubernetes parameters
