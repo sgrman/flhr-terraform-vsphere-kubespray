@@ -400,7 +400,7 @@ resource "vsphere_virtual_machine" "master" {
     linked_clone  = "${var.vm_linked_clone}"
 
     customize {
-      timeout = "20"
+      timeout = "50"
 
       linux_options {
         host_name = "${var.vm_name_prefix}-${count.index}"
@@ -460,7 +460,7 @@ resource "vsphere_virtual_machine" "worker" {
     linked_clone  = "${var.vm_linked_clone}"
 
     customize {
-      timeout = "20"
+      timeout = "50"
 
       linux_options {
         host_name = "${var.vm_name_prefix}-worker-${count.index}"
